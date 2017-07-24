@@ -1,17 +1,5 @@
-# gulp.4-set
+# h1 - одна решетка
 
-## запуск при отладке 
+## h2 - две решетки
 	npm start
 
-## Подготовка для продакшена 
-	npm run build
-- убирает sourcemap
-- создает screen.min.css
-	
-### Особености сборки:
-- Gulp 4
-- ES6
-- SASS/SCSS
-- POSTCSS
-- Foundation
-- BrowserSync
