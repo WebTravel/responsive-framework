@@ -1,0 +1,63 @@
+$margin: 15px;
+
+@include breakpoint(large down) {
+
+  .responsive-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    &:after {
+      display: none;
+    }
+    > * {
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+    &.responsive-element5 {
+      > * {
+        width: calc(20% - #{$margin});
+        margin-bottom: $margin;
+        &:not(:nth-child(5n)) {
+          margin-right: $margin;
+        }
+        &:nth-last-child(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+}
+
+@include breakpoint(medium down) {
+  .responsive-wrapper {
+    &.responsive-element5 {
+      > * {
+        width: calc(33.3333% - #{$margin});
+        &:nth-child(5n) {
+          margin-right: $margin;
+        }
+        &:not(:nth-child(3n)) {
+          margin-right: $margin;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(small down) {
+  .responsive-wrapper {
+    display: block;
+    &.responsive-element5 {
+      > * {
+        width: 100%;
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+        &:not(:nth-child(3n)) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+

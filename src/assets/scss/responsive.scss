@@ -1,0 +1,7 @@
+@import 'settings';
+
+//Общие сбрасывающие стили
+@import 'base/reset';
+
+//Стили для товаров (сетки товаров)
+@import 'partials/blocks/goods-grid';
