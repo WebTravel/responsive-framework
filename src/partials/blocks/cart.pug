@@ -1,0 +1,21 @@
+table#cartTable
+  thead
+    tr
+      th № заказа
+      th Изображение
+      th Наименование
+      th Количество
+      th Цена
+  tbody
+    mixin tr
+      tr
+        td 1
+        td
+          img(src="assets/img/good.jpg", alt="") 
+        td Google Pixel black 
+        td 2 
+        td 16 400 руб.
+    +tr
+    +tr
+    tr
+      td(colspan="5") Итого: 128 365 руб.

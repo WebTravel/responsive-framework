@@ -12,10 +12,12 @@ $margin: 15px;
       flex-grow: 1;
       flex-shrink: 1;
     }
-    &.responsive-element5 {
+    &.responsive-element5, &.responsive-element4 {
       > * {
-        width: calc(20% - #{$margin});
+        width: calc(25% - #{$margin});
         margin-bottom: $margin;
+        margin-left: 0;
+        margin-top: 0;
         &:not(:nth-child(5n)) {
           margin-right: $margin;
         }
@@ -30,15 +32,14 @@ $margin: 15px;
 
 @include breakpoint(medium down) {
   .responsive-wrapper {
-    &.responsive-element5 {
+    justify-content: space-between;
+    &.responsive-element5, &.responsive-element4, &.responsive-element3 {
+      margin-right: 0;
       > * {
-        width: calc(33.3333% - #{$margin});
-        &:nth-child(5n) {
-          margin-right: $margin;
-        }
-        &:not(:nth-child(3n)) {
-          margin-right: $margin;
-        }
+        flex-grow: 0;
+        width: calc(50% - #{$margin});
+        margin-right: 0 !important;
+
       }
     }
   }
@@ -47,15 +48,9 @@ $margin: 15px;
 @include breakpoint(small down) {
   .responsive-wrapper {
     display: block;
-    &.responsive-element5 {
+    &.responsive-element5, &.responsive-element4, &.responsive-element3 {
       > * {
         width: 100%;
-        &:nth-child(5n) {
-          margin-right: 0;
-        }
-        &:not(:nth-child(3n)) {
-          margin-right: 0;
-        }
       }
     }
   }
