@@ -1,0 +1,38 @@
+$borderColor: #dedede;
+@include breakpoint(medium down) {
+  .at {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      
+    }
+    &__item {
+      flex: 1 1 50%;
+      border: 1px solid $borderColor;
+      padding: rem-calc(20);
+      > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem-calc(10);
+        &:nth-child(2) {
+          display: block;
+          > div {
+            padding-bottom: rem-calc(10)
+          }
+        }
+      }
+    }
+    &__title {
+      font-weight: bold;
+    }
+  }
+}
+
+@include breakpoint(small down) {
+  .at {
+    &__item {
+      flex: 1 1 100%;
+    }
+  }
+}

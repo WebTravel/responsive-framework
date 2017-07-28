@@ -7,15 +7,17 @@ table#cartTable
       th Количество
       th Цена
   tbody
-    mixin tr
+    mixin tr(number, name, count, price)
       tr
-        td 1
-        td
+        td #{number}
+        td 
           img(src="assets/img/good.jpg", alt="") 
-        td Google Pixel black 
-        td 2 
-        td 16 400 руб.
-    +tr
-    +tr
+        td #{name}
+        td #{count}
+        td #{price}
+    +tr('1', 'Google Pixel black ', '2', '16 400 руб.')
+    +tr('2', 'IPhone 5 ', '1', '35 200 руб.')
+    +tr('3', 'Huawei ', '2', '17 320 руб.')
+    //- +tr('4', 'LG ', '1', '22 460 руб.')
     tr
       td(colspan="5") Итого: 128 365 руб.
